@@ -38,3 +38,26 @@ craft remove mycommand
 ```
 That's it. Comcraft should have removed your command from the a `.lib` and `.bin` folders in your home directory. 
 
+<hr>
+
+### List Your Creations
+See a list of the commands created with comcraft.
+```
+craft ls
+```
+Can also do `craft list` or `craft -l`
+
+<hr>
+
+### See Comcraft Info
+See basic info about Comfraft, like filepath info, etc.
+```
+craft info
+```
+Can also do `craft -i`
+
+<hr>
+
+###About Comcraft
+Comcraft is a tool for you to make and organize your own terminal commands. It creates two folders in your home directory called `.bin` and `.lib`. All new commands are stored in the `.lib` folder and are pointed to by a symlink in the `.bin` directtory.
+
