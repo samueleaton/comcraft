@@ -1,0 +1,19 @@
+{
+  "name": "comet",
+  "version": "0.0.01",
+  "description": "",
+  "main": "comet",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Sam Eaton",
+  "license": "ISC",
+  "dependencies": {
+    "fs-extra": "^0.24.0",
+    "minimist": "^1.2.0",
+    "shelljs": "^0.5.3"
+  },
+  "bin": {
+    "comet": "index.js"
+  }
+}
