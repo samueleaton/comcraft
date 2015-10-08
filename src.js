@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-"use strict";
+'use strict';
 
 let path = require('path');
 let fs = require('fs-extra');
@@ -7,126 +7,75 @@ let exec = require('child_process').exec;
 let argv = require('minimist')(process.argv.slice(2));
 
 let fang = require('./scripts/fang');
-let Event = new (require("events").EventEmitter);
+let Event = new (require('events').EventEmitter);
 
-let binDir = path.normalize(process.env.HOME+"/.bin");
-let libDir = path.normalize(process.env.HOME+"/.lib");
+let binDir = path.normalize(process.env.HOME+'/.bin');
+let libDir = path.normalize(process.env.HOME+'/.lib');
 
 let helpMenu = require('./scripts/helpMenu');
 
 let reservedCommands = [
-	"rm",
-	"cd",
-	"craft",
-	"comcraft",
-	"sudo",
-	"$"
+	'rm',
+	'cd',
+	'craft',
+	'comcraft',
+	'sudo',
+	'$'
 ];
 
 let comcraftCommands = [
-	"create",
-	"remove",
-	"list",
-	"help"
+	'create',
+	'remove',
+	'list',
+	'help'
 ];
 
 let compatibleEnvironments = [
-	"node",
-	"ruby"
+	'node',
+	'ruby'
 ];
 
 let newCommandMap = {
-	node: `console.log('$$');\nconsole.log('##')`,
-	ruby: `puts '$$'\nputs '##'`,
+	node: 'console.log("$$");\nconsole.log("##")',
+	ruby: 'puts "$$"\nputs "##"',
 };
 
 
 /* Internal Error
 */
-Event.on("internalError", function(err){
-	console.log("Internal Error: \n", err);
+Event.on('internalError', function(err) {
+	console.log('Internal Error: \n', err);
 });
 
 
 /* User Error
 */
-Event.on("userError", function(err){
-	console.log("\nHouston, we have a problem!");
+Event.on('userError', function(err) {
+	console.log('\nHouston, we have a problem!');
 	console.log(err);
 	console.log('\nTry \'craft help\' for help.\n');
-	process.exit(1);
+	throw new Error('Something bad happened!');
 });
-
-
-/* On Comcraft Init
-*/
-Event.on("init", function(args){
-	if(!args) return Event.emit("internalError");
-	// console.log("\nargs", args);
-	parseArgs(args);
-});
-
-
-/* On User Arguments Parsed
-*/
-Event.on("argsParsed", function(args){
-	if(!args) return Event.emit("internalError");
-
-	if(args.commandName) {
-		args.execPath = path.normalize(libDir+"/"+args.commandName+"/"+args.commandName);
-	}
-
-	if(args.action === "create") {
-		createCommand.init(args);
-	} 
-	else if(args.action === "remove") {
-		removeCommand.init(args);
-	} 
-	else if(args.action === "help") {
-		helpMenu();
-	} 
-	else if(args.action === "list") {
-		listCommands();
-	} 
-	else if(args.action === "info") {
-		showInfo();
-	}
-});
-
-
-/* On Command Created
-*/
-Event.on("comCreated", function(args){
-	console.log("\nWe have liftoff! 🚀 ");
-	console.log("The file at '"+libDir+"/"+args.commandName+"/"+args.commandName+"' will run on the '"+args.commandName+"' command. So go ahead and edit it.\n");
-});
-
-Event.on("comRemoved", function(args){
-	console.log("Successfully removed the " + args.commandName + " command.");
-});
-
-
-
-
 
 /* CREATE THE COMMAND
 */
-let createCommand = fang(
+const createCommand = fang(
 
 	/* create '$HOME/.bin' directory if it doesn't exist
 	*/
-	function(args){
+	function(args) {
+		/*eslint-disable  no-invalid-this*/
 		fs.mkdirp(path.normalize(binDir), (err) => {
-			if(err) Event.emit('internalError', err);
+			if (err) Event.emit('internalError', err);
 			this.next(args);
 		});
 	},
 
 	/* create '$HOME/.lib' and '$HOME/.lib/command_name' directories if they don't exist
 	*/
-	function(args){
-		fs.mkdirp(path.normalize(libDir+"/"+args.commandName), (err) => {
-			if(err) Event.emit('internalError', err);
+	function(args) {
+		fs.mkdirp(path.normalize(libDir + '/' + args.commandName), (err) => {
+			if (err) Event.emit('internalError', err);
 			this.next(args);
 		});
 	},
@@ -134,7 +83,7 @@ let createCommand = fang(
 	/* check if an executable already exists at '$HOME/.lib/command_name/command_name' 
 	*/
 	function(args){
-		fs.readFile(args.execPath, "utf-8", (err) => {
+		fs.readFile(args.execPath, 'utf-8', (err) => {
 			if(!err) {
 				console.log("\nHouston, We have a problem: '"+args.execPath + "' already exists.\n");
 				console.log("If you want to remove the '"+args.commandName+"' command, try:\n");
@@ -183,10 +132,8 @@ let createCommand = fang(
 			Event.emit("comCreated", args);
 		});
 	}
-
+	/*eslint-disable  no-invalid-this*/
 );
-
-
 
 
 
@@ -206,6 +153,59 @@ let removeCommand = fang(
 		});
 	}
 );
+
+/* On Comcraft Init
+*/
+Event.on('init', function(args) {
+	if (!args) return Event.emit('internalError');
+	// console.log('\nargs', args);
+	parseArgs(args);
+});
+
+
+/* On User Arguments Parsed
+*/
+Event.on('argsParsed', function(args){
+	if(!args) return Event.emit('internalError');
+
+	if(args.commandName) {
+		args.execPath = path.normalize(libDir+'/'+args.commandName+'/'+args.commandName);
+	}
+
+	if(args.action === 'create') {
+		createCommand.init(args);
+	} 
+	else if(args.action === 'remove') {
+		removeCommand.init(args);
+	} 
+	else if(args.action === 'help') {
+		helpMenu();
+	} 
+	else if(args.action === 'list') {
+		listCommands();
+	} 
+	else if(args.action === 'info') {
+		showInfo();
+	}
+});
+
+
+/* On Command Created
+*/
+Event.on("comCreated", function(args){
+	console.log("\nWe have liftoff! 🚀 ");
+	console.log("The file at '"+libDir+"/"+args.commandName+"/"+args.commandName+"' will run on the '"+args.commandName+"' command. So go ahead and edit it.\n");
+});
+
+Event.on("comRemoved", function(args){
+	console.log("Successfully removed the " + args.commandName + " command.");
+});
+
+
+
+
+
+
 
 
 

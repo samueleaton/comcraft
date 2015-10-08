@@ -1,30 +1,41 @@
 module.exports = function() {
-	// Fang Core Methods
+	// Fang Object
 	var _fang = {
-		// Initiates Fang Series
+
+		/* Initiates Fang Series
+		*/
 		init: function () {
 			var args = [];
 			for(var i = 0, ii = arguments.length; i < ii; i++){
 				args.push(arguments[i]);
 			}
-			this.utils.i = -1;
-			return this.next.apply(null, args);
+			// sets first function of series as the next
+			_fang.utils.i = -1;
+
+			// run next function
+			return _fang.next.apply(null, args);
 		},
 
-		// Runs the Next Function in the Series
+		/* Runs the Next Function in the Series
+		*/
 		next: function() {
-			// converts all incoming arguments into array
 			var args = [];
 			for(var i = 0, ii = arguments.length; i < ii ; i++) {
 				args.push(arguments[i]);
 			}
-			// if a proceeding function has been defined (using the 'then' method)
+
+			// if the next function has been defined
 			if (typeof _fang.utils.queue[_fang.utils.i + 1] !== 'undefined') {
+				// add the next function to the 
+				args.unshift(_fang.next);
 				// increment the current call index
 				_fang.utils.i++;
 				// run the next function
 				return _fang.utils.queue[_fang.utils.i].apply({next: _fang.next}, args);
 			}
+
+			// if there are no more function, next will re-init fang group
+			return _fang.init.apply(null, args);
 		},
 
 		utils: {
@@ -37,8 +48,8 @@ module.exports = function() {
 	};
 
 	// var newFangObject = Object.create(_fang);
-	for(var i = 0, ii = arguments.length; i < ii; i++){
-		if(typeof arguments[i] === "function") _fang.utils.queue.push(arguments[i]);
+	for (var i = 0, ii = arguments.length; i < ii; i++) {
+		if (typeof arguments[i] === "function") _fang.utils.queue.push(arguments[i]);
 		// if(typeof arguments[i] === "function") newFangObject.then(arguments[i]);
 	}
 

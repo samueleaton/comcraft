@@ -1,0 +1,1054 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"Help",
+				"HelpMenu"
+			],
+			[
+				"bin",
+				"binDir"
+			],
+			[
+				"file",
+				"files"
+			],
+			[
+				"brow",
+				"browserified"
+			],
+			[
+				"browseri",
+				"browserify"
+			],
+			[
+				"get",
+				"getElementsByClassName"
+			],
+			[
+				"cache",
+				"cacheKeys"
+			],
+			[
+				"cl",
+				"cleanCache"
+			],
+			[
+				"ex",
+				"execPath"
+			],
+			[
+				"smallestNum",
+				"smallestNumIndex"
+			],
+			[
+				"arr",
+				"arrSlice"
+			],
+			[
+				"blur",
+				"blurAmount"
+			],
+			[
+				"pro",
+				"process"
+			],
+			[
+				"write",
+				"Writable"
+			],
+			[
+				"acorn",
+				"acornParsed"
+			],
+			[
+				"emit",
+				"emitCount"
+			],
+			[
+				"new",
+				"newEmitter"
+			],
+			[
+				"num",
+				"num1"
+			],
+			[
+				"append",
+				"appendTo"
+			],
+			[
+				"min",
+				"minCss"
+			],
+			[
+				"task",
+				"task2"
+			],
+			[
+				"bash",
+				"bash_profile"
+			],
+			[
+				"blue",
+				"blueGang"
+			],
+			[
+				"bower",
+				"bowerArray"
+			],
+			[
+				"js",
+				"js_files"
+			],
+			[
+				"text",
+				"text-decoration"
+			],
+			[
+				"tran",
+				"transparent"
+			],
+			[
+				"class",
+				"classList"
+			],
+			[
+				"back",
+				"background-color"
+			],
+			[
+				"background",
+				"background"
+			],
+			[
+				"rgb",
+				"rgba()"
+			],
+			[
+				"border-bttom",
+				"border-bottom-right-radius"
+			],
+			[
+				"app",
+				"appendChild"
+			],
+			[
+				"this",
+				"thisLayer"
+			],
+			[
+				"jump",
+				"jumpAnimation"
+			],
+			[
+				"suc",
+				"success"
+			],
+			[
+				"succ",
+				"successfulQueues"
+			],
+			[
+				"cons",
+				"console"
+			],
+			[
+				"walk",
+				"walkAnimation"
+			],
+			[
+				"y",
+				"yVel"
+			],
+			[
+				"start",
+				"starBtn"
+			],
+			[
+				"word_",
+				"word_total_div"
+			],
+			[
+				"hide",
+				"hideTextareaWordCount"
+			],
+			[
+				"font",
+				"font-size"
+			],
+			[
+				"fun",
+				"function"
+			],
+			[
+				"square",
+				"squarePosition"
+			],
+			[
+				"sty",
+				"styles"
+			],
+			[
+				"preg",
+				"preg_replace"
+			],
+			[
+				"box",
+				"box-shadow"
+			],
+			[
+				"wd",
+				"width"
+			],
+			[
+				"ac",
+				"action	Attr"
+			],
+			[
+				"form",
+				"form_output"
+			],
+			[
+				"image",
+				"image_container"
+			],
+			[
+				"bl",
+				"blur"
+			],
+			[
+				"spl",
+				"spl_autoload_register"
+			],
+			[
+				"margin",
+				"margin"
+			],
+			[
+				"marg",
+				"margin"
+			],
+			[
+				"search",
+				"searchNotificationSect"
+			],
+			[
+				"do",
+				"doSomething"
+			],
+			[
+				"th",
+				"theObject"
+			],
+			[
+				"ready",
+				"readystate"
+			],
+			[
+				"print",
+				"print_r"
+			],
+			[
+				"hashed",
+				"hashedPWbc"
+			],
+			[
+				"mar",
+				"margin"
+			],
+			[
+				"radio",
+				"radio_input"
+			],
+			[
+				"fot",
+				"font-size"
+			],
+			[
+				"custom",
+				"customBox"
+			],
+			[
+				"check",
+				"checkboxes"
+			],
+			[
+				"entry",
+				"entryTopics"
+			],
+			[
+				"subs",
+				"subs_btn"
+			],
+			[
+				"my",
+				"myInt"
+			],
+			[
+				"text-",
+				"text-align"
+			],
+			[
+				"background-c",
+				"background-color"
+			],
+			[
+				"fizz",
+				"fizzbuzz"
+			],
+			[
+				"logPa",
+				"logoParallaxSafari"
+			],
+			[
+				"is",
+				"is_safari"
+			],
+			[
+				"border-",
+				"border-box"
+			],
+			[
+				"font-",
+				"font-weight"
+			],
+			[
+				"chore",
+				"chore_id"
+			],
+			[
+				"btn",
+				"btn_action"
+			],
+			[
+				"h",
+				"h1	Tag"
+			],
+			[
+				"second",
+				"secondMultiple"
+			],
+			[
+				"if",
+				"ife	if … else … end"
+			],
+			[
+				"end",
+				"endVal"
+			],
+			[
+				"first",
+				"firstMultiple"
+			],
+			[
+				"out",
+				"outputCont"
+			],
+			[
+				"wid",
+				"width"
+			],
+			[
+				"max",
+				"max-width"
+			],
+			[
+				"bck",
+				"background-size"
+			],
+			[
+				"read",
+				"read_urgent"
+			],
+			[
+				"inlin",
+				"inline-block"
+			],
+			[
+				"border",
+				"border"
+			],
+			[
+				"border-r",
+				"border-radius"
+			],
+			[
+				"inl",
+				"inline-block"
+			],
+			[
+				"read_",
+				"read_completed"
+			],
+			[
+				"con",
+				"connection"
+			],
+			[
+				"to",
+				"text-bottom"
+			],
+			[
+				"font-s",
+				"font-size"
+			],
+			[
+				"lef",
+				"margin-left"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "src.js",
+			"settings":
+			{
+				"buffer_size": 7111,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/samueleaton1/Library/Application Support/Sublime Text 3/Packages/User/SublimeLinter.sublime-settings",
+			"settings":
+			{
+				"buffer_size": 1366,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": ".eslintrc",
+			"settings":
+			{
+				"buffer_size": 6565,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "comcraft.sublime-project",
+			"settings":
+			{
+				"buffer_size": 156,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "index.js",
+			"settings":
+			{
+				"buffer_size": 7111,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+		[
+			[
+				[
+					"Packages/Java/Ant.sublime-build",
+					""
+				],
+				[
+					"Packages/Java/JavaC.sublime-build",
+					""
+				]
+			],
+			[
+				"Packages/Java/JavaC.sublime-build",
+				""
+			]
+		]
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 400.0,
+		"last_filter": "enable",
+		"selected_items":
+		[
+			[
+				"enable",
+				"SublimeLinter: Enable Linter"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"pack",
+				"Package Control: Remove Package"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 475.0
+	},
+	"console":
+	{
+		"height": 188.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = 'eb2297e1a458f27d836c04bb0cbaf282' + 'd0e7a3098092775ccb37ca9d6b2e4b7d'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/samueleaton1/Sites/Github/comcraft"
+	],
+	"file_history":
+	[
+		"/Users/samueleaton1/Sites/Github/comcraft/scripts/NodeCraft.js",
+		"/Users/samueleaton1/Sites/Github/comcraft/scripts/HelpMenu.js",
+		"/Users/samueleaton1/Sites/Github/comcraft/index.js",
+		"/Users/samueleaton1/Sites/Github/comcraft/package.json",
+		"/Users/samueleaton1/.bash_profile",
+		"/Users/samueleaton1/Sites/Github/qualtrics-theme-suite/src/scripts/main-renderer/test.scss",
+		"/Users/samueleaton1/Sites/cs240/EvilHangman/index.js",
+		"/Users/samueleaton1/Downloads/fpjs8-master/images/cat1.jpg",
+		"/Users/samueleaton1/Sites/comcraft/package.json",
+		"/Users/samueleaton1/Ruby/Sandbox/tester.rb",
+		"/Users/samueleaton1/Ruby/Sandbox/test.rb",
+		"/Users/samueleaton1/Sites/Github/devmunchies-site/.eslintrc",
+		"/Users/samueleaton1/Sites/myname/index.js",
+		"/Users/samueleaton1/Sites/node-test/package.json",
+		"/Users/samueleaton1/Sites/node-test/index.js",
+		"/Users/samueleaton1/.nvm/versions/io.js/v2.4.0/lib/node_modules/gulp/index.js",
+		"/Users/samueleaton1/.nvm/versions/io.js/v2.4.0/lib/node_modules/gulp/bin/gulp.js",
+		"/Users/samueleaton1/.nvm/versions/io.js/v2.4.0/lib/node_modules/samtest/index.js",
+		"/Users/samueleaton1/.gitconfig",
+		"/Users/samueleaton1/Downloads/temple/el.js",
+		"/Users/samueleaton1/Downloads/temple/temple.js",
+		"/Users/samueleaton1/Sites/express-test/index.js",
+		"/Users/samueleaton1/Sites/Github/qualtrics-theme-suite/src/scripts/main/modes/edit-preview/edit-preview.js",
+		"/Users/samueleaton1/Sites/Github/qualtrics-theme-suite/local/previewTemplate.html",
+		"/Users/samueleaton1/Sites/Github/qualtrics-theme-suite/src/scripts/main/main.js",
+		"/Users/samueleaton1/Sites/Github/qualtrics-theme-suite/src/styles/main/2.editor.styl",
+		"/Users/samueleaton1/Sites/electronapp/second.html",
+		"/Users/samueleaton1/Sites/electronapp/main.js",
+		"/Users/samueleaton1/Sites/electronapp/package.json",
+		"/Users/samueleaton1/Sites/electronapp/index.html",
+		"/Users/samueleaton1/Sites/SuperApp/index.js",
+		"/Users/samueleaton1/Sites/SuperApp/pre.html",
+		"/Users/samueleaton1/Sites/Github/qualtrics-themes-manager/bower.json",
+		"/Users/samueleaton1/Sites/Github/qualtrics-themes-manager/src/html/section.right.html",
+		"/Users/samueleaton1/Sites/Github/qualtrics-themes-manager/src/html/index.html",
+		"/Users/samueleaton1/Sites/Github/qualtrics-themes-manager/package.json",
+		"/Users/samueleaton1/Sites/Github/qualtrics-themes-manager/gulpfile.js",
+		"/Users/samueleaton1/Sites/Github/qualtrics-themes-manager/public/js/main.min.js",
+		"/Users/samueleaton1/Sites/Github/qualtrics-themes-manager/src/html/preview.svg.html",
+		"/Users/samueleaton1/Sites/Github/qualtrics-themes-manager/src/css-pre/2.header.styl",
+		"/Users/samueleaton1/Sites/Github/qualtrics-theme-manager/v1.0/src/scss/home.scss",
+		"/Users/samueleaton1/Sites/Github/qualtrics-theme-manager/v2.0 (electron)/public/css/main.min.css",
+		"/Users/samueleaton1/Sites/Github/qualtrics-theme-manager/v2.0 (electron)/src/scss/test.scss",
+		"/Users/samueleaton1/Sites/Github/qualtrics-theme-manager/v1.0/views/index.ejs",
+		"/Users/samueleaton1/Sites/Github/qualtrics-theme-manager/v1.0/public/stylesheets/main.css",
+		"/Users/samueleaton1/Sites/Github/qualtrics-theme-generator/gulpfile.js",
+		"/Users/samueleaton1/Sites/Github/qualtrics-theme-generator/public/stylesheets/main.css",
+		"/Users/samueleaton1/Sites/Github/qualtrics-theme-generator/public/javascripts/main.js",
+		"/Users/samueleaton1/Sites/sandbox/styles.css",
+		"/Users/samueleaton1/Sites/sandbox/index.html",
+		"/Users/samueleaton1/Documents/sandbox/styles.css",
+		"/Users/samueleaton1/Documents/sandbox/index.html",
+		"/Users/samueleaton1/Documents/sandbox/newclient.command",
+		"/Users/samueleaton1/Documents/sandbox/test.sh",
+		"/Users/samueleaton1/Sites/Other/super_test/bower.json",
+		"/Users/samueleaton1/Sites/Other/super_test/package.json",
+		"/usr/bin/grep",
+		"/Users/samueleaton1/Sites/Github/ChainGang/demo/form.js",
+		"/Users/samueleaton1/Sites/Github/ChainGang/demo/form.php",
+		"/Users/samueleaton1/Sites/Github/ChainGang/demo/script.js",
+		"/Users/samueleaton1/Sites/Bitbucket/ssi/SSI_WEB_CREDENTIALS.txt",
+		"/Users/samueleaton1/Sites/Github/knucklebone.js/README.md",
+		"/Users/samueleaton1/Sites/Github/knucklebone.js/test.js",
+		"/Users/samueleaton1/Sites/Github/knucklebone.js/process.php",
+		"/Users/samueleaton1/Sites/Github/knucklebone.js/index.html",
+		"/Users/samueleaton1/Sites/Github/munchRPG/munchRPG.js",
+		"/Users/samueleaton1/Sites/munchRPG/test.js",
+		"/Users/samueleaton1/Sites/munchRPG/munchRPG.js",
+		"/Users/samueleaton1/Sites/munchRPG/index.html",
+		"/Users/samueleaton1/Sites/Github/club-website/assets/js/home.js",
+		"/Users/samueleaton1/Sites/Github/club-website/partials/home.game.php",
+		"/Users/samueleaton1/Sites/Github/club-website/partials/home.aboutus.php",
+		"/Users/samueleaton1/Sites/Github/club-website/assets/css/home.css",
+		"/Users/samueleaton1/Sites/Github/club-website/index.php",
+		"/Users/samueleaton1/Sites/Github/club-website/README.md",
+		"/Users/samueleaton1/Sites/byu_dev_new/assets/js/home.js",
+		"/Users/samueleaton1/Sites/byu_dev_new/assets/css/home.css",
+		"/Users/samueleaton1/Sites/byu_dev_new/assets/css/global.css",
+		"/Users/samueleaton1/Sites/byu_dev_new/partials/home.hero.php",
+		"/Users/samueleaton1/Sites/byu_dev_new/index.php",
+		"/Users/samueleaton1/Sites/byu_dev_new/assets/images/byu_dev_logo.png",
+		"/Users/samueleaton1/Sites/byu_dev_new/assets/images/home/check_lime.png",
+		"/Users/samueleaton1/Sites/byu_dev_new/partials/home.requestdev.php",
+		"/Users/samueleaton1/Sites/byu_dev_new/partials/home.aboutus.php",
+		"/Users/samueleaton1/Sites/byu_dev_new/assets/js/global.js",
+		"/Users/samueleaton1/Sites/byu_dev_new/assets/js/script.js",
+		"/Users/samueleaton1/Sites/byu_dev_new/assets/css/styles.css",
+		"/Users/samueleaton1/Sites/byu_dev_new/assets/css/requestdev.css",
+		"/Users/samueleaton1/Sites/byu_dev_new/assets/css/home.aboutus.css",
+		"/Users/samueleaton1/Sites/requestAnimationFrame/script.js",
+		"/Users/samueleaton1/Sites/requestAnimationFrame/index.html",
+		"/Users/samueleaton1/Sites/byu_dev_new/rotate_device.afdesign",
+		"/Users/samueleaton1/Sites/byu_dev_new/index.html",
+		"/Users/samueleaton1/Sites/password_hash/index.php",
+		"/Users/samueleaton1/Sites/password_hash/secure.php",
+		"/Users/samueleaton1/Sites/munch_editor/munch_output.html",
+		"/Users/samueleaton1/Sites/munch_editor/munch_output.txt",
+		"/Users/samueleaton1/Downloads/dight250_comprehension/test.js",
+		"/Users/samueleaton1/Sites/cs256/cs256/menu.html",
+		"/Users/samueleaton1/Sites/cs256/cs256/js/chat.js",
+		"/Users/samueleaton1/Sites/cs256/cs256/js/auto-open.js",
+		"/Users/samueleaton1/Sites/cs256/cs256/css/menu.new.css",
+		"/Users/samueleaton1/Sites/cs256/cs256/menu.new.html",
+		"/Users/samueleaton1/Sites/cs256/cs256/css/chat.css",
+		"/Users/samueleaton1/Sites/cs256/cs256/css/main.css",
+		"/Users/samueleaton1/Sites/cs256/cs256/css/video.css",
+		"/Users/samueleaton1/Sites/cs256/cs256/video.html",
+		"/private/etc/apache2/magic",
+		"/private/etc/apache2/httpd.conf",
+		"//libexec/apache2/libphp5.so",
+		"//libexec/apache2/mod_alias.so",
+		"/Library/WebServer/Documents/index.html.en",
+		"/Users/samueleaton1/Sites/error_log.txt",
+		"/private/var/log/apache2/error_log",
+		"/private/var/log/apache2/error_log.txt",
+		"/Users/samueleaton1/.php_history",
+		"/Users/samueleaton1/Sites/checkbox_test/script.js",
+		"/Users/samueleaton1/Sites/checkbox_test/styles.css",
+		"/Users/samueleaton1/Sites/checkbox_test/index.html",
+		"/Users/samueleaton1/Sites/byu_dev_new/css/styles.css",
+		"/Users/samueleaton1/Sites/byu_dev_new/js/script.js",
+		"/Users/samueleaton1/Desktop/test_MINI_cms.php",
+		"/private/var/folders/pc/sntkpgz130x2h580j1vwyng80000gp/T/0afcad13-e341-4ec2-85ab-0d94398f72ba/public_html/index.php",
+		"/Users/samueleaton1/Desktop/days.html",
+		"/Users/samueleaton1/Desktop/js_test/styles.css",
+		"/Users/samueleaton1/Desktop/js_test/script.js",
+		"/Users/samueleaton1/Desktop/js_test/index.html",
+		"/Volumes/Lexar/js_test/index.html"
+	],
+	"find":
+	{
+		"height": 39.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"6",
+			"HelpMenu",
+			"head",
+			"currentpartition",
+			"\\\\",
+			"helpMenu",
+			"parseArgs",
+			"shelljs",
+			"input",
+			"files",
+			"fs",
+			"’",
+			"‘",
+			"’",
+			"‘",
+			"var",
+			"filename",
+			"var",
+			"runSequence",
+			"webserver",
+			"browserify",
+			"livereload",
+			"watch",
+			"Watch",
+			"watch",
+			"util",
+			"nodeCount",
+			"\"",
+			"comet",
+			"asdffdsa",
+			"racecars",
+			"selectionSort",
+			"currentIndex",
+			"eachCompleted",
+			"	",
+			"low",
+			"needle",
+			"days",
+			"December",
+			"argv",
+			"+x",
+			"0",
+			"blur",
+			"+blur",
+			"+=",
+			"+blur",
+			"setRed(r)",
+			"rArr",
+			"int ",
+			"#",
+			"back",
+			"body",
+			"MainGray",
+			"users",
+			");\n",
+			"block",
+			"appendToListener",
+			"Stylus",
+			"stylus",
+			"Stylus",
+			"stylus",
+			"Stylus",
+			"stylus",
+			"Stylus",
+			"stylus",
+			"Stylus",
+			"stylus",
+			"Stylus",
+			"stylus",
+			"120",
+			"170",
+			"245",
+			"preview",
+			"50",
+			"70",
+			"230",
+			"blue",
+			"myCont",
+			"field-cont",
+			"red",
+			"\"1\"",
+			"field_cont",
+			"input_cont",
+			"textinput",
+			"#input1_cont",
+			"id=\"input",
+			"input_cont",
+			"top_logo",
+			"70px",
+			"#fff",
+			"input",
+			"=",
+			"number",
+			"res",
+			"javascript",
+			".5",
+			"230",
+			"tag",
+			"170",
+			"180",
+			"230",
+			"button.details",
+			"draw",
+			"ctx",
+			"canvas",
+			"idle",
+			"yGrav",
+			".Y",
+			".y",
+			".Y",
+			"conso",
+			"textareaString",
+			"hide_detail",
+			"about_us_detail",
+			"hide",
+			"images",
+			"title",
+			"adjustLogo",
+			"#title",
+			"check_t",
+			"check_",
+			"radio_",
+			"checkbox_",
+			"checkbox",
+			"images/",
+			"50",
+			"230",
+			"220"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "src.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 7111,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								34,
+								34
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Babel/JavaScript (Babel).tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/Users/samueleaton1/Library/Application Support/Sublime Text 3/Packages/User/SublimeLinter.sublime-settings",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1366,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								366,
+								366
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JSON.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": ".eslintrc",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 6565,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								6565,
+								6565
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Babel/JSON.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "comcraft.sublime-project",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 156,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								97,
+								97
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Babel/JSON.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "index.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 7111,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								34,
+								34
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Babel/JavaScript (Babel).tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 27.0
+	},
+	"input":
+	{
+		"height": 34.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 92.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "comcraft.sublime-project",
+	"replace":
+	{
+		"height": 50.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 195.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
