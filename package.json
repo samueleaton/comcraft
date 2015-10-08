@@ -1,8 +1,8 @@
 {
-  "name": "comet",
-  "version": "0.0.01",
+  "name": "comcraft",
+  "version": "0.0.1",
   "description": "",
-  "main": "comet",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -14,6 +14,6 @@
     "shelljs": "^0.5.3"
   },
   "bin": {
-    "comet": "index.js"
+    "comcraft": "index.js"
   }
 }
