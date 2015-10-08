@@ -5,13 +5,16 @@ let path = require('path');
 let fs = require('fs-extra');
 let exec = require('child_process').exec;
 let argv = require('minimist')(process.argv.slice(2));
-let fang = require('./scripts/fang'); // function gangs 
+
+let fang = require('./scripts/fang');
 let Event = new (require("events").EventEmitter);
 
 let HelpMenu = require('./scripts/HelpMenu');
 
 let binDir = path.normalize(process.env.HOME+"/.bin");
 let libDir = path.normalize(process.env.HOME+"/.lib");
+
+let helpMenu = require('./scripts/helpMenu');
 
 let reservedCommands = [
 	"rm",
@@ -37,8 +40,6 @@ let compatibleEnvironments = [
 let newCommandMap = {
 	node: `console.log('$$');\nconsole.log('##')`,
 	ruby: `puts '$$'\nputs '##'`,
-	python: `print '$$'\nprint '##'`,
-	php: `echo '$$';\necho '##';`
 };
 
 
@@ -148,7 +149,7 @@ let createCommand = fang(
 
 	/* create the executable file
 	*/
-	function(args){
+	function(args) {
 
 		let fileContents = "#!/usr/bin/env "+args.env+"\n";
 		fileContents += newCommandMap[args.env].replace(
@@ -228,7 +229,7 @@ function showInfo(){
 
 /* LIST CREATED COMMANDS
 */
-function listCommands(){
+function listCommands() {
 	fs.readdir(binDir, function(err, files) {
 		if(err) return Event.emit('internalError', err);
 		console.log('Commands in ' + binDir + ': ');
@@ -343,34 +344,3 @@ function parseArgs(args) {
 
 
 Event.emit("init", argv);
-
-
-
-
-
-
-// Samples:
-`
-craft my-command
-craft create my-command
-
-//specify target language environment
-craft create my-command --env=node
-craft create my-command --env=ruby
-craft create my-command --env=python
-craft create my-command --env=php
-
-craft remove my-command
-
-craft -h
-craft --help
-craft help
-
-craft -l
-craft --list
-
-craft -i
-craft info
-`
-
-
