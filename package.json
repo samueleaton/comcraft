@@ -1,22 +1,35 @@
 {
   "name": "comcraft",
-  "version": "0.0.1",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "lint": "eslint src.js",
-    "compile": "babel src.js > index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "version": "0.0.11",
   "author": "Sam Eaton",
-  "license": "ISC",
-  "dependencies": {
-    "fs-extra": "^0.24.0",
-    "minimist": "^1.2.0",
-    "shelljs": "^0.5.3"
-  },
+  "description": "Craft your own personal terminal commands",
+  "main": "./bin/index.js",
   "bin": {
-    "comcraft": "index.js"
+    "comcraft": "./bin/index.js",
+    "craft": "./bin/index.js"
+  },
+  "scripts": {
+    "test": "npm run -s lint",
+    "build": "npm run -s _build",
+    "lint": "eslint -c .eslintrc src.js",
+    "prepublish": "npm run -s build",
+    "postpublish": "printf '%s\\033[30;102m%s\\033[39;49m\\n\\n' ' Module ' ' Published! '",
+    "postlint": "npm run -s lint-success",
+    "lint-success": "printf '%s\\033[30;102m%s\\033[39;49m\\n\\n' ' Lint ' ' Passed! '",
+    "pre_build": "npm run -s lint",
+    "_build": "babel src.js > './bin/index.js'",
+    "post_build": "npm run -s _build-success",
+    "_build-success": "printf '%s\\033[30;102m%s\\033[39;49m\\n\\n' ' Babel ' ' Complete! '"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/samueleaton/comcraft"
+  },
+  "dependencies": {
+    "fangs": "0.0.11",
+    "fs-extra": "^0.24.0",
+    "minimist": "^1.2.0"
   },
   "devDependencies": {
     "eslint": "^1.6.0"

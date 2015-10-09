@@ -1,7 +1,7 @@
 # Comcraft
 🚀 Craft your own terminal commands.
 
-###How to Install
+### How to Install
 With npm:
 ```
 npm install -g comcraft
@@ -13,7 +13,7 @@ export PATH=$HOME/.bin:$PATH
 
 <hr>
 
-###Creating a New Command
+### Creating a New Command
 ```
 craft create mycommand
 ```
@@ -23,7 +23,7 @@ craft mycommand
 ```
 Blast off! Comcraft should have created a `.lib` directory in your home directory. Find the new command and start editing. You're all set!
 
-####Specify a Target Language/Environment
+#### Specify a Target Language/Environment
 ```
 craft create mycommand --env=ruby
 ```
@@ -32,7 +32,7 @@ If your language isn't here, just make quick tweak to your command file after yo
 
 <hr>
 
-###Removing a Command
+### Removing a Command
 ```
 craft remove mycommand
 ```
@@ -58,6 +58,6 @@ Can also do `craft -i`
 
 <hr>
 
-###About Comcraft
+### About Comcraft
 Comcraft is a tool for you to make and organize your own terminal commands. It creates two folders in your home directory called `.bin` and `.lib`. All new commands are stored in the `.lib` folder and are pointed to by a symlink in the `.bin` directtory.
 
