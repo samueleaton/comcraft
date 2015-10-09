@@ -13,7 +13,8 @@ var Event = new EventEmitter();
 var binDir = path.normalize(path.join(process.env.HOME, '/.bin'));
 var libDir = path.normalize(path.join(process.env.HOME, '/.lib'));
 
-var HelpMenu = require('../scripts/helpMenu');
+var HelpMenu = require('../scripts/HelpMenu');
+var NodeCraft = require('../scripts/NodeCraft');
 
 var reservedCommands = ['rm', 'cd', 'craft', 'comcraft', 'sudo', '$'];
 
@@ -41,6 +42,12 @@ Event.on('userError', function (err) {
 	throw new Error('Something bad happened!');
 });
 
+/* Brand To Remove Doesn't Exists
+*/
+Event.on('removeCommandENOENT', function (args) {
+	console.log('Whoops!\nThe "' + args.commandName + '" command either DOES NOT EXIST or is not located at: ' + binDir);
+});
+
 /* CREATE THE COMMAND
 */
 var createCommand = fang(
@@ -48,7 +55,7 @@ var createCommand = fang(
 /* create '$HOME/.bin' directory if it doesn't exist
 */
 function (next, args) {
-	/*eslint-disable  no-invalid-this*/
+
 	fs.mkdirp(path.normalize(binDir), function (err) {
 		if (err) Event.emit('internalError', err);
 		next(args);
@@ -106,16 +113,27 @@ function (next, args) {
 */
 function (next, args) {
 	fs.symlink(args.execPath, binDir + '/' + args.commandName, function (err) {
-		if (err) Event.emit('internalError', err);
-		Event.emit('comCreated', args);
+		if (err) return Event.emit('internalError', err);
+		next(args);
 	});
-}
-/*eslint-disable  no-invalid-this*/
-);
+}, function (next, args) {
+	if (args.env === 'node') {
+		NodeCraft(args, Event, libDir);
+	} else {
+		next(args);
+	}
+}, function (next, args) {
+	Event.emit('comCreated', args);
+});
 
 /* REMOVE A COMMAND
 */
 var removeCommand = fang(function (next, args) {
+	fs.stat(binDir + '/' + args.commandName, function (err) {
+		if (err) return Event.emit('removeCommandENOENT', args);
+		next(args);
+	});
+}, function (next, args) {
 	fs.remove(binDir + '/' + args.commandName, function (err) {
 		if (err) return Event.emit('userError', err);
 		next(args);
@@ -178,12 +196,12 @@ function helpMenu() {
 */
 function printVersion() {
 	fs.readFile('./package.json', 'utf-8', function (err, file) {
-		if (err) Event.emit('error', err);
+		if (err) Event.emit('internalError', err);
 		var data = undefined;
 		try {
 			data = JSON.parse(file);
 		} catch (e) {
-			if (err) Event.emit('error', e);
+			if (err) Event.emit('internalError', e);
 		}
 		console.log(data.version);
 	});

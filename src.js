@@ -12,7 +12,8 @@ const Event = new EventEmitter();
 const binDir = path.normalize(path.join(process.env.HOME, '/.bin'));
 const libDir = path.normalize(path.join(process.env.HOME, '/.lib'));
 
-const HelpMenu = require('../scripts/helpMenu');
+const HelpMenu = require('../scripts/HelpMenu');
+const NodeCraft = require('../scripts/NodeCraft');
 
 const reservedCommands = [
 	'rm',
@@ -57,6 +58,14 @@ Event.on('userError', function (err) {
 	throw new Error('Something bad happened!');
 });
 
+/* Brand To Remove Doesn't Exists
+*/
+Event.on('removeCommandENOENT', function (args) {
+	console.log('Whoops!\nThe "' + args.commandName + '" command either DOES NOT EXIST or is not located at: ' + binDir);
+});
+
+
+
 /* CREATE THE COMMAND
 */
 const createCommand = fang(
@@ -64,7 +73,7 @@ const createCommand = fang(
 	/* create '$HOME/.bin' directory if it doesn't exist
 	*/
 	function (next, args) {
-		/*eslint-disable  no-invalid-this*/
+
 		fs.mkdirp(path.normalize(binDir), (err) => {
 			if (err) Event.emit('internalError', err);
 			next(args);
@@ -128,11 +137,22 @@ const createCommand = fang(
 	*/
 	function (next, args) {
 		fs.symlink(args.execPath, binDir + '/' + args.commandName, (err) => {
-			if (err) Event.emit('internalError', err);
-			Event.emit('comCreated', args);
+			if (err) return Event.emit('internalError', err);
+			next(args);
 		});
+	},
+
+	function (next, args) {
+		if (args.env === 'node') {
+			NodeCraft(args, Event, libDir);
+		} else {
+			next(args);
+		}
+	},
+
+	function (next, args) {
+		Event.emit('comCreated', args);
 	}
-	/*eslint-disable  no-invalid-this*/
 );
 
 
@@ -140,6 +160,12 @@ const createCommand = fang(
 /* REMOVE A COMMAND
 */
 const removeCommand = fang(
+	function (next, args) {
+		fs.stat(binDir + '/' + args.commandName, function (err) {
+			if (err) return Event.emit('removeCommandENOENT', args);
+			next(args);
+		});
+	},
 	function (next, args) {
 		fs.remove(binDir + '/' + args.commandName, (err) => {
 			if (err) return Event.emit('userError', err);
@@ -211,12 +237,12 @@ function helpMenu() {
 */
 function printVersion() {
 	fs.readFile('./package.json', 'utf-8', function (err, file) {
-		if (err) Event.emit('error', err);
+		if (err) Event.emit('internalError', err);
 		let data;
 		try {
 			data = JSON.parse(file);
 		} catch (e) {
-			if (err) Event.emit('error', e);
+			if (err) Event.emit('internalError', e);
 		}
 		console.log(data.version);
 	});

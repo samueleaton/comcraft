@@ -1,13 +1,13 @@
 'use strict';
 
-let menu = `
+const menu = `
 ----------------------------------
  Options
 ----------------------------------
 
 -v, --version          ... print comcraft version
--i, info               ... print comcraft info
--l                     ... list created commands
+-h, --help             ... print help screen
+-l , ls                ... list created commands
 
 ----------------------------------
  Instructions
@@ -39,6 +39,6 @@ let menu = `
   See a list of the commands created with comcraft.
 	`;
 
-module.exports = function() {
+module.exports = function () {
 	console.log(menu);
 };
