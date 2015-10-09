@@ -31,6 +31,7 @@
     "fs-extra": "^0.24.0",
     "minimist": "^1.2.0"
   },
+  "preferGlobal": "true",
   "devDependencies": {
     "eslint": "^1.6.0"
   }

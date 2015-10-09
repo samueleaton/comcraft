@@ -63,26 +63,26 @@ const createCommand = fang(
 
 	/* create '$HOME/.bin' directory if it doesn't exist
 	*/
-	function (args) {
+	function (next, args) {
 		/*eslint-disable  no-invalid-this*/
 		fs.mkdirp(path.normalize(binDir), (err) => {
 			if (err) Event.emit('internalError', err);
-			this.next(args);
+			next(args);
 		});
 	},
 
 	/* create '$HOME/.lib' and '$HOME/.lib/command_name' directories if they don't exist
 	*/
-	function (args) {
+	function (next, args) {
 		fs.mkdirp(path.normalize(libDir + '/' + args.commandName), (err) => {
 			if (err) Event.emit('internalError', err);
-			this.next(args);
+			next(args);
 		});
 	},
 
 	/* check if an executable already exists at '$HOME/.lib/command_name/command_name'
 	*/
-	function (args) {
+	function (next, args) {
 		fs.readFile(args.execPath, 'utf-8', (err) => {
 			if (!err) {
 				console.log('\nHouston, We have a problem: \'' + args.execPath + '\' already exists.\n');
@@ -90,43 +90,43 @@ const createCommand = fang(
 				console.log('\t comcraft remove ' + args.commandName + '\n');
 				throw new Error('Executable already exists');
 			}
-			this.next(args);
+			next(args);
 		});
 	},
 
 	/* create the executable file
 	*/
-	function (args) {
+	function (next, args) {
 
 		let fileContents = '#!/usr/bin/env ' + args.env + '\n';
 		fileContents += newCommandMap[args.env].replace(
 			'$$',
-			'This is your "' + args.commandName + '" command!'
+			'This is your \'' + args.commandName + '\' command!'
 		).replace(
 			'##',
-			'Edit me at "' + args.execPath + '"'
+			'Edit me at \'' + args.execPath + '\''
 		);
 
 		fileContents += '\n';
 
 		fs.writeFile(args.execPath, fileContents, (err) => {
 			if (err) Event.emit('internalError', err);
-			this.next(args);
+			next(args);
 		});
 	},
 
 	/* set the file mode as 'executable'
 	*/
-	function (args) {
+	function (next, args) {
 		fs.chmod(args.execPath, '755', (err) => {
 			if (err) Event.emit('internalError', err);
-			this.next(args);
+			next(args);
 		});
 	},
 
 	/* create a symlink from '$HOME/.bin' to '$HOME/.lib/command_name/command_name'
 	*/
-	function (args) {
+	function (next, args) {
 		fs.symlink(args.execPath, binDir + '/' + args.commandName, (err) => {
 			if (err) Event.emit('internalError', err);
 			Event.emit('comCreated', args);
@@ -140,13 +140,13 @@ const createCommand = fang(
 /* REMOVE A COMMAND
 */
 const removeCommand = fang(
-	function (args) {
+	function (next, args) {
 		fs.remove(binDir + '/' + args.commandName, (err) => {
 			if (err) return Event.emit('userError', err);
-			this.next(args);
+			next(args);
 		});
 	},
-	function (args) {
+	function (next, args) {
 		fs.remove(libDir + '/' + args.commandName, (err) => {
 			if (err) return Event.emit('userError', err);
 			Event.emit('comRemoved', args);
@@ -173,15 +173,15 @@ Event.on('argsParsed', function (args) {
 	}
 
 	if (args.action === 'create') {
-		createCommand.init(args);
+		createCommand(args);
 	} else if (args.action === 'remove') {
-		removeCommand.init(args);
+		removeCommand(args);
 	} else if (args.action === 'help') {
 		helpMenu();
 	} else if (args.action === 'list') {
 		listCommands();
-	} else if (args.action === 'info') {
-		showInfo();
+	} else if (args.action === 'version') {
+		printVersion();
 	}
 });
 
@@ -209,8 +209,17 @@ function helpMenu() {
 
 /* INFO
 */
-function showInfo() {
-	console.log('show info screen');
+function printVersion() {
+	fs.readFile('./package.json', 'utf-8', function (err, file) {
+		if (err) Event.emit('error', err);
+		let data;
+		try {
+			data = JSON.parse(file);
+		} catch (e) {
+			if (err) Event.emit('error', e);
+		}
+		console.log(data.version);
+	});
 }
 
 
@@ -244,9 +253,9 @@ function parseArgs(args) {
 		return Event.emit('argsParsed', args);
 	}
 
-	/*SHOW INFO ABOUT COMCRAFT*/
-	if (args.i || args.info || argv._[0] === 'info') {
-		args.action = 'info';
+	/*SHOW COMCRAFT VERSION*/
+	if (args.v || args.version || argv._[0] === 'version') {
+		args.action = 'version';
 		return Event.emit('argsParsed', args);
 	}
 
