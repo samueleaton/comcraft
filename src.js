@@ -55,7 +55,7 @@ Event.on('userError', function (err) {
 	console.log('\nHouston, we have a problem!');
 	console.log(err);
 	console.log('\nTry \'craft help\' for help.\n');
-	throw new Error('Something bad happened!');
+	process.exit(0); // eslint-disable-line
 });
 
 /* Brand To Remove Doesn't Exists
@@ -97,7 +97,7 @@ const createCommand = fang(
 				console.log('\nHouston, We have a problem: \'' + args.execPath + '\' already exists.\n');
 				console.log('If you want to remove the \'' + args.commandName + '\' command, try:\n');
 				console.log('\t comcraft remove ' + args.commandName + '\n');
-				throw new Error('Executable already exists');
+				process.exit(0); // eslint-disable-line
 			}
 			next(args);
 		});
