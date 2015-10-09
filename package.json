@@ -21,7 +21,7 @@
     "post_build": "npm run -s _build-success",
     "_build-success": "printf '%s\\033[30;102m%s\\033[39;49m\\n\\n' ' Babel ' ' Complete! '",
     "postinstall": "npm run -s postinstall-message",
-    "postinstall-message": "printf '\n\n%s\n\n\t%s\n\n' 'And then add this to the bottom of your .bash_profile or .bashrc:' 'export PATH=$HOME/.bin:$PATH'"
+    "postinstall-message": "printf '\n\n%s\n\n\t%s\n\n\n' 'Make sure you've added this to the bottom of your .bash_profile or .bashrc:' 'export PATH=$HOME/.bin:$PATH'"
   },
   "license": "MIT",
   "repository": {
