@@ -1,6 +1,6 @@
 {
   "name": "comcraft",
-  "version": "0.0.11",
+  "version": "0.0.3",
   "author": "Sam Eaton",
   "description": "Craft your own personal terminal commands",
   "main": "./bin/index.js",
