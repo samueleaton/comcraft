@@ -27,7 +27,7 @@ Blast off! Comcraft should have created a `.lib` directory in your home director
 ```
 craft create mycommand --env=ruby
 ```
-Available target languages are `node`, `ruby`, `python`, `bash`, and `php`.  The default is `node`.
+Available target languages (for now) are `node`, `ruby`.  The default is `node`.
 If your language isn't here, just make quick tweak to your command file after you create it.
 
 <br>
